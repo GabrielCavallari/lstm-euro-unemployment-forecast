@@ -51,6 +51,7 @@ O modelo demonstrou alta aderência aos dados reais, com destaque para:
 
 * **Gabriel Lopes Cavallari** - *Análise de Dados, Visualização e Documentação*
 * **Derek Amaral** - *Implementação do Modelo LSTM e Pesquisa*
+* **Luiz Alberto Lucchetta** - *Visualização e Apresentação*
 
 ---
 *Este projeto foi desenvolvido como parte da disciplina de Inteligência Artificial do IFSP.*
