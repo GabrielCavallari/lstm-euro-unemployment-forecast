@@ -59,7 +59,7 @@ Para garantir que o projeto rode na sua máquina exatamente como rodou na nossa,
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone [https://github.com/GabrielCavallari/lstm-euro-unemployment-forecast.git](https://github.com/GabrielCavallari/lstm-euro-unemployment-forecast.git)
     ```
 2.  Instale as bibliotecas necessárias:
     ```bash
