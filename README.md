@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-orange)
-![Status](https://img.shields.io/badge/Status-Concluído-green)
+![Status](https://img.shields.io/badge/Status-Versão%20Final-green)
 
 > Uma análise preditiva utilizando Deep Learning para modelar tendências econômicas complexas com base em dados históricos reais.
 
@@ -39,6 +39,14 @@ O modelo demonstrou alta aderência aos dados reais, com destaque para:
 * **Robustez:** Ausência de *overfitting* significativo, com as curvas de treino e validação convergindo adequadamente.
 
 ![Gráfico de Resultados](images/result_chart.png)
+
+### 🔮 Previsão Futura (Multi-step Forecasting)
+
+Além da validação no conjunto de teste, o modelo LSTM foi estendido para realizar previsões futuras de longo prazo (multi-step forecasting), simulando o comportamento do desemprego para os próximos anos.
+
+Essa abordagem utiliza o próprio output do modelo como entrada recursiva, permitindo analisar **tendências futuras**, e não valores exatos, sendo especialmente útil para planejamento estratégico e análise econômica.
+
+![Previsão Futura](images/future_forecast.png)
 
 ## 📂 Estrutura do Repositório
 
