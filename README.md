@@ -10,7 +10,7 @@
 
 ## 📋 Sobre o Projeto
 
-Este projeto aplica redes neurais recorrentes do tipo **LSTM (Long Short-Term Memory)** para prever a taxa de desemprego na Zona do Euro. O objetivo principal foi validar a capacidade dessa arquitetura de Deep Learning em capturar padrões não-lineares e responder a choques econômicos, como a crise da COVID-19.
+Este projeto aplica redes neurais recorrentes do tipo **LSTM (Long Short-Term Memory)** para prever a taxa de desemprego na Zona do Euro. O objetivo principal foi validar e estender a capacidade dessa arquitetura de Deep Learning em capturar padrões não-lineares e responder a choques econômicos, como a crise da COVID-19.
 
 A análise utiliza uma série temporal histórica real, cobrindo o período de **1990 a 2023**, extraída da base de dados do Federal Reserve (FRED).
 
