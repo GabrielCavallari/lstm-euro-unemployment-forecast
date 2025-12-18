@@ -50,7 +50,7 @@ Um dos principais entregáveis deste projeto é a simulação de longo prazo (*M
 
 Isso transforma o gráfico de uma simples "previsão matemática" em uma ferramenta de **Gestão de Risco**.
 
-![Previsão Futura](images/forecast_plot.png)
+![Previsão Futura](images/result_chart.png)
 *(Exemplo visual da projeção de 5 anos com margem de incerteza)*
 
 ## 📦 Como Executar o Projeto
