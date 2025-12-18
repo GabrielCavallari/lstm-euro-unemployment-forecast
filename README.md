@@ -76,9 +76,8 @@ Para garantir que o projeto rode na sua máquina exatamente como rodou na nossa,
 
 ## 👨‍💻 Autores
 
-* **Gabriel Lopes Cavallari** - *Análise de Dados, Visualização e Documentação*
-* **Derek Amaral** - *Implementação do Modelo LSTM e Pesquisa*
+* **Gabriel Lopes Cavallari** - *Refatoração e Otimização do Modelo (Stacked LSTM), Análise de Dados e Documentação*
+* **Derek Amaral** - *Implementação Base do Modelo e Pesquisa*
 * **Luiz Alberto Lucchetta** - *Visualização e Apresentação*
-
 ---
 *Este projeto foi desenvolvido como parte da disciplina de Inteligência Artificial do IFSP.*
