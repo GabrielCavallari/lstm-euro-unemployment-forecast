@@ -4,56 +4,75 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-orange)
 ![Status](https://img.shields.io/badge/Status-Versão%20Final-green)
 
-> Uma análise preditiva utilizando Deep Learning para modelar tendências econômicas complexas com base em dados históricos reais.
+> *"Dados só têm valor quando as pessoas conseguem entendê-los."*
+>
+> Uma análise preditiva utilizando Deep Learning para transformar dados históricos em inteligência estratégica e modelar tendências econômicas.
 
 ---
 
 ## 📋 Sobre o Projeto
 
-Este projeto aplica redes neurais recorrentes do tipo **LSTM (Long Short-Term Memory)** para prever a taxa de desemprego na Zona do Euro. O objetivo principal foi validar e estender a capacidade dessa arquitetura de Deep Learning em capturar padrões não-lineares e responder a choques econômicos, como a crise da COVID-19.
+Este projeto aplica redes neurais recorrentes do tipo **LSTM (Long Short-Term Memory)** para prever a taxa de desemprego na Zona do Euro. O diferencial desta abordagem é a capacidade de **capturar ciclos econômicos de longo prazo**, permitindo simular cenários futuros com maior embasamento do que modelos lineares tradicionais.
 
-A análise utiliza uma série temporal histórica real, cobrindo o período de **1990 a 2023**, extraída da base de dados do Federal Reserve (FRED).
+A análise utiliza uma série temporal histórica real (1990-2023), extraída da base de dados do Federal Reserve (FRED), focando em apoiar tomadas de decisão através da identificação de tendências estruturais.
 
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Python
-* **Modelagem & Deep Learning:** TensorFlow / Keras (LSTM)
+* **Modelagem:** TensorFlow / Keras (Stacked LSTM)
 * **Manipulação de Dados:** Pandas, NumPy
-* **Visualização:** Matplotlib
+* **Visualização:** Matplotlib (com foco em Storytelling)
 * **Pré-processamento:** Scikit-Learn (MinMaxScaler)
-* **Design da Apresentação:** Figma
+* **Reprodutibilidade:** `requirements.txt`
 
-## 📊 Metodologia
+## 📊 Metodologia e Evolução do Modelo
 
-1.  **Coleta de Dados:** Extração da série histórica `HIGN00EA19M052N` (Harmonized Unemployment Rate) do FRED.
-2.  **Pré-processamento:** Normalização dos dados (escala 0-1) para otimizar a performance da rede neural.
-3.  **Janelamento (Windowing):** Criação de janelas deslizantes de 12 meses (Look-back) para treinar o modelo a olhar para o passado antes de prever o futuro.
-4.  **Treinamento:** Modelo sequencial com camada LSTM e Dense, otimizado com Adam e função de perda MSE.
+O projeto seguiu um pipeline rigoroso de Data Science, com melhorias incrementais na arquitetura da rede:
 
-## 🚀 Resultados
+1.  **Coleta de Dados:** Extração da série histórica `HIGN00EA19M052N` (Harmonized Unemployment Rate).
+2.  **Pré-processamento:** Normalização (escala 0-1) para estabilidade numérica.
+3.  **Engenharia de Features (Windowing):**
+    * *Ajuste Estratégico:* Utilizamos uma janela de observação (*Look-back*) de **60 meses (5 anos)**. Isso permite que a rede aprenda ciclos econômicos completos (crises e recuperações) em vez de focar apenas no curto prazo.
+4.  **Arquitetura da Rede (Stacked LSTM):**
+    * Implementação de múltiplas camadas LSTM para capturar padrões complexos.
+    * Aplicação de camadas de **Dropout** para evitar *overfitting* e garantir que o modelo generalize bem para dados não vistos.
 
-O modelo demonstrou alta aderência aos dados reais, com destaque para:
+## 🚀 Resultados e Simulação de Cenários
 
-* **Precisão:** Erro Médio Quadrático (MSE) final de **0.0024** na escala normalizada.
-* **Sensibilidade:** Capacidade de acompanhar a subida abrupta do desemprego durante a pandemia de 2020 e a subsequente recuperação econômica.
-* **Robustez:** Ausência de *overfitting* significativo, com as curvas de treino e validação convergindo adequadamente.
+O modelo demonstrou alta capacidade de generalização, conseguindo identificar pontos de inflexão importantes na economia (como a recuperação pós-crises).
 
-![Gráfico de Resultados](images/result_chart.png)
+### 🔮 Previsão Futura (5 Anos à Frente)
 
-### 🔮 Previsão Futura (Multi-step Forecasting)
+Um dos principais entregáveis deste projeto é a simulação de longo prazo (*Multi-step Forecasting*). Diferente de previsões pontuais, geramos um **Cenário de Tendência**:
 
-Além da validação no conjunto de teste, o modelo LSTM foi estendido para realizar previsões futuras de longo prazo (multi-step forecasting), simulando o comportamento do desemprego para os próximos anos.
+* **Linha de Tendência:** Projeção do comportamento estrutural do desemprego.
+* **Margem de Incerteza (Sombra):** Adicionamos visualmente uma faixa de estimativa que cresce ao longo do tempo, comunicando de forma transparente que a volatilidade aumenta no longo prazo.
 
-Essa abordagem utiliza o próprio output do modelo como entrada recursiva, permitindo analisar **tendências futuras**, e não valores exatos, sendo especialmente útil para planejamento estratégico e análise econômica.
+Isso transforma o gráfico de uma simples "previsão matemática" em uma ferramenta de **Gestão de Risco**.
 
-![Previsão Futura](images/future_forecast.png)
+![Previsão Futura](images/forecast_plot.png)
+*(Exemplo visual da projeção de 5 anos com margem de incerteza)*
+
+## 📦 Como Executar o Projeto
+
+Para garantir que o projeto rode na sua máquina exatamente como rodou na nossa, incluímos um arquivo de dependências.
+
+1.  Clone o repositório:
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    ```
+2.  Instale as bibliotecas necessárias:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  Execute os notebooks na pasta `/notebooks`.
 
 ## 📂 Estrutura do Repositório
 
-* `/data`: Arquivos CSV utilizados.
-* `/notebooks`: Código fonte completo em Jupyter Notebook.
-* `/presentation`: Slides do projeto.
-* `/images`: Gráficos gerados.
+* `/data`: Arquivos CSV brutos e processados.
+* `/notebooks`: Código fonte documentado e exploratório.
+* `/images`: Gráficos gerados para os relatórios.
+* `/presentation`: Material de apoio visual.
 
 ## 👨‍💻 Autores
 
